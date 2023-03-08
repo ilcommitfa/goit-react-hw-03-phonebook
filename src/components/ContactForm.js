@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Form, InputThumb, Input, ButtonThumb } from './ContactForm.styled'; 
 
@@ -44,5 +45,9 @@ function ContactForm({ onAddContact }) {
     </Form>
   );
 }
+
+ContactForm.propTypes = {
+  onAddContact: PropTypes.func.isRequired,
+};
 
 export default ContactForm;
